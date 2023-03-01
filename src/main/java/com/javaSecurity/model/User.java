@@ -1,6 +1,8 @@
-package com.jwtauth.security.model;
+package com.javaSecurity.model;
 
-import jakarta.annotation.Generated;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,13 +10,17 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity(name = "mst_User")
 public class User {
 
 	@jakarta.persistence.Id
-	@Generated(value = { "id" })
+	@GeneratedValue
 	private int id;
-	
+
+	@Column
 	private String name;
+
+	@Column
 	private String role;
 
 }
